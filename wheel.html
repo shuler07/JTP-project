@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JTP: Wheel</title>
+      <script type="module" crossorigin src="/JTP-project/assets/wheel-BdBbtXYv.js"></script>
+      <link rel="modulepreload" crossorigin href="/JTP-project/assets/scriptFirebase-Chl6wdre.js">
+      <link rel="modulepreload" crossorigin href="/JTP-project/assets/script-WD93NjK7.js">
+      <link rel="stylesheet" crossorigin href="/JTP-project/assets/scriptFirebase-BQWFwQhx.css">
+      <link rel="stylesheet" crossorigin href="/JTP-project/assets/wheel-BuDFLbKv.css">
+    </head>
+    <body>
+
+        <header id="header">
+            <button id="logoButton">
+                <img id="logoImage" src="shared-assets/images/Logo.png" />
+            </button>
+
+            <div id="headerInfoContainer">
+                <h1>Wheel</h1>
+
+                <img id="headerInfoImage" src="shared-assets/images/InfoIcon.png" />
+
+                <div id="headerInfoPopup">
+                    <h6>Wheel consists of 40 parts. Chances are: Red - 45%, Black - 45%, Yellow - 7.5%, Green - 2.5%</h6>
+                </div>
+            </div>
+
+            <div id="headerAccountContainer">
+                <img id="headerAccountImage" src="temp-assets/Avatar.png">
+
+                <span id="headerAccountBalanceText" class="gradientText">Register</span>
+
+                <img id="headerAccountArrow">
+            </div>
+        </header>
+
+        <section id="wheelSection">
+            <div id="wheelWindow">
+                <img id="wheelWindowImage" src="shared-assets/images/Wheel.png" />
+
+                <img id="wheelWindowArrow" src="shared-assets/images/WheelArrow.png" />
+
+                <div id="wheelWindowBlur"></div>
+
+                <button id="wheelWindowSpin">Spin 0 $</button>
+
+                <div id="wheelWindowGameResult">
+                    <h1 id="wheelWindowGameResultColor">Red x2</h1>
+                    <h2 id="wheelWindowGameResultProfit">+ 10 $</h2>
+                </div>
+            </div>
+
+            <div id="wheelMenus">
+                <div id="wheelBet">
+                    <h2 style="padding: 20px 0px 0px 20px">Bet</h2> 
+
+                    <div class="wheelBetContainer">
+                        <button id="bet1" class="wheelBetButton">1 $</button>
+                        <button id="bet2" class="wheelBetButton">5 $</button>
+                        <button id="bet3" class="wheelBetButton">10 $</button>
+                        <button id="bet4" class="wheelBetButton">20 $</button>
+                        <button id="bet5" class="wheelBetButton">50 $</button>
+                    </div>
+
+                    <input id="wheelBetCustom" type="number" placeholder="Your bet - 0 $"></textarea>
+
+                    <h2 style="margin: 20px 0px 0px 20px;">Color</h2>
+
+                    <div class="wheelBetContainer">
+                        <button id="redButton" class="wheelGameResultButton">Red x2</button>
+                        <button id="blackButton" class="wheelGameResultButton">Black x2</button>
+                        <button id="yellowButton" class="wheelGameResultButton">Yellow x5</button>
+                        <button id="greenButton" class="wheelGameResultButton">Green x10</button>
+                    </div>
+
+                    <h2 id="possibleWinText" style="margin: 20px 0px 0px 20px;">Choose bet and color</h2>
+                </div>
+
+                <div id="wheelHistory">
+                    <h2 style="padding: 20px 0px 0px 20px">History</h2>
+
+                    <div id="wheelHistoryContainer">
+                        <h5 style="position: absolute; width: calc(100% - 40px); height: 110px; text-align: center; line-height: 110px; color: gray;">Spin wheel to see games history</h5>
+                        <!-- <div class="wheelHistoryElement" style="background: #FF4B4B"></div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="wheelLastGamesSection">
+            <h1>Last games</h1>
+
+            <div id="wheelLastGamesContainer">
+                <h5 style="position: absolute; width: 100%; height: 100px; text-align: center; line-height: 100px; color: gray;">Spin wheel to see your last games</h5>
+                <!-- <div class="wheelLastGameCard" style="background: #5C9E5E;">
+                    <div class="wheelLastGameCardInfoContainer">
+                        <h6 style="width: 100%; height: 40px; text-align: center; line-height: 40px;">2 $</h6>
+                        <div class="wheelLastGameCardColorInfo" style="background: #FF4B4B;"></div>
+                    </div>
+                    <img class="wheelLastGameCardInfoContainer" src="shared-assets/images/ArrowSign.png" style="height: 40px;" />
+                    <div class="wheelLastGameCardInfoContainer">
+                        <h5 style="width: 100%; height: 40px; text-align: center; line-height: 40px;">4 $</h5>
+                        <div class="wheelLastGameCardColorInfo" style="background: #FF4B4B;"></div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <section id="wheelStatisticksSection">
+            <h1>Statisticks</h1>
+
+            <div id="wheelStatisticksContainer">
+                <div class="wheelStatisticksBlock">
+                    <h5>Total spins</h5>
+                    <h5 id="totalSpins">0</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Total wins</h5>
+                    <h5 id="totalWins">0</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Total money bet</h5>
+                    <h5 id="totalMoneyBet">0 $</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Total money won</h5>
+                    <h5 id="totalMoneyWon">0 $</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Win percentage</h5>
+                    <h5 id="winPercentage">0 %</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Money profit</h5>
+                    <h5 id="moneyProfit">0 $</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Red choosed</h5>
+                    <h5 id="redChoosed">0</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Red won</h5>
+                    <h5 id="redWon">0</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Black choosed</h5>
+                    <h5 id="blackChoosed">0</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Black won</h5>
+                    <h5 id="blackWon">0</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Yellow choosed</h5>
+                    <h5 id="yellowChoosed">0</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Yellow won</h5>
+                    <h5 id="yellowWon">0</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Green choosed</h5>
+                    <h5 id="greenChoosed">0</h5>
+                </div>
+
+                <div class="wheelStatisticksBlock">
+                    <h5>Green won</h5>
+                    <h5 id="greenWon">0</h5>
+                </div>
+            </div>
+        </section>
+
+        <button id="debugButton1">Clear local Storage & Refresh page</button>
+        <button id="debugButton2">Add 100$</button>
+    </body>
+</html>
