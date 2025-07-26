@@ -1,0 +1,1 @@
+import{s as e,a as t}from"./scriptFirebase-Chl6wdre.js";import"./script-WD93NjK7.js";const n=document.getElementById("wheelButton");n.addEventListener("click",()=>{window.location.href="wheel.html"});document.getElementById("temp1").addEventListener("click",()=>{e(t)});
